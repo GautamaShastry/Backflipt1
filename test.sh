@@ -33,14 +33,25 @@
 
 # 5) Copying one directory to another directory
 
- mkdir gautam
- touch 1.txt
+#  mkdir gautam
+#  touch 1.txt
 
- mkdir shastry
- ls
- rm 1.txt
+#  mkdir shastry
+#  ls
+#  rm 1.txt
+#  cd gautam
+#  touch 1.txt
+#  echo "Hello World" > 1.txt
+
+# cp gautam/1.txt shastry 
+
+
+# 6) Write a shell script to count the only files in the directory.
+
  cd gautam
- touch 1.txt
- echo "Hello World" > 1.txt
+ touch 2.py
+ mkdir hello
 
-cp gautam/1.txt shastry 
+find gautam -maxdepth 1 -type f | wc -l
+
+
