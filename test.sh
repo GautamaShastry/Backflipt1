@@ -13,10 +13,20 @@
 
 #3)Read N value from user and print numbers between 0 to N
 
-read -p "Enter a number: " num 
-i=0
-while [ $i -le $num ]
-do
-echo $i 
-i=`expr $i + 1`
-done
+# read -p "Enter a number: " num 
+# i=0
+# while [ $i -le $num ]
+# do
+# echo $i 
+# i=`expr $i + 1`
+# done
+
+#4)Read directory name from user , delete if it exists or print message if not exists
+
+read -p "Give a directory name: " name
+if [ -e $name ]
+then
+rm -rf $name
+else
+echo "Does not Exist"
+fi
