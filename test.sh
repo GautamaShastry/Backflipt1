@@ -23,10 +23,24 @@
 
 #4)Read directory name from user , delete if it exists or print message if not exists
 
-read -p "Give a directory name: " name
-if [ -e $name ]
-then
-rm -rf $name
-else
-echo "Does not Exist"
-fi
+# read -p "Give a directory name: " name
+# if [ -e $name ]
+# then
+# rm -rf $name
+# else
+# echo "Does not Exist"
+# fi
+
+# 5) Copying one directory to another directory
+
+ mkdir gautam
+ touch 1.txt
+
+ mkdir shastry
+ ls
+ rm 1.txt
+ cd gautam
+ touch 1.txt
+ echo "Hello World" > 1.txt
+
+cp gautam/1.txt shastry 
