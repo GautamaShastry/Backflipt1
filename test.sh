@@ -48,10 +48,20 @@
 
 # 6) Write a shell script to count the only files in the directory.
 
- cd gautam
- touch 2.py
- mkdir hello
+#  cd gautam
+#  touch 2.py
+#  mkdir hello
 
-find gautam -maxdepth 1 -type f | wc -l
+# find gautam -maxdepth 1 -type f | wc -l
 
+# 7) If there are less than 5 sub directories then create a directory Xenovus otherwise exit with a message
+
+n= 
+if [ `find gautam -maxdepth 1 -type d | wc -l` -lt 5 ]
+then
+mkdir Xenovus
+else
+echo "Sorry"
+exit
+fi
 
