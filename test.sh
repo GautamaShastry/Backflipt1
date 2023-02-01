@@ -66,18 +66,49 @@
 
 # 9) REad name,contact,email,gender from user if any of them is missing exit orelse write them onto a file
 
-read -p "Enter a name: " name
-read -p "Enter your contact: " contact
-read -p "Enter your email: " email
-read -p "Enter your gender: " gender
- if [ -z $name -o -z $contact -o -z $email -o -z gender ]
- then
- exit
- else
- touch 2.txt
- echo $name  >> 2.txt
- echo $contact >> 2.txt
- echo $email >> 2.txt
- echo $gender >> 2.txt
- fi
- 
+# read -p "Enter a name: " name
+# read -p "Enter your contact: " contact
+# read -p "Enter your email: " email
+# read -p "Enter your gender: " gender
+# if [ -z $name ]
+# then
+# echo "Sorry"
+# exit
+# elif [ -z $contact ]
+# then
+# echo "Sorry"
+# exit
+# elif [ -z $email ]
+# then
+# echo "Sorry"
+# exit
+# elif [ -z $gender ]
+# then
+# echo "Sorry"
+# exit 
+# else
+# touch 2.txt
+# echo $name > 2.txt
+# echo $contact >> 2.txt
+# echo $email >> 2.txt
+# echo $gender >> 2.txt
+# fi
+
+
+# 8) print the contents of the directories
+
+read -p "Enter Directory(des/doc/dow): " direct 
+ case $direct in
+     [dD][eE][sS])
+        ls /mnt/c/Users/GIUTAMA SHASTRY/Desktop
+        ;;
+     [dD][oO][cC])
+        ls /mnt/c/Users/GIUTAMA SHASTRY/Documents
+        ;;
+     [dD][oO][wW])
+        ls /mnt/c/Users/GIUTAMA SHASTRY/Downloads
+        ;;
+    *)
+       echo "Invalid Sorry"
+       ;;
+ esac
