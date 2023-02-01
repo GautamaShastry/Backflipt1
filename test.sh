@@ -56,12 +56,28 @@
 
 # 7) If there are less than 5 sub directories then create a directory Xenovus otherwise exit with a message
 
-n= 
-if [ `find gautam -maxdepth 1 -type d | wc -l` -lt 5 ]
-then
-mkdir Xenovus
-else
-echo "Sorry"
-exit
-fi
+# if [ `find gautam -maxdepth 1 -type d | wc -l` -lt 5 ]
+# then
+# mkdir Xenovus
+# else
+# echo "Directory Creation not needed"
+# exit
+# fi# 
 
+# 9) REad name,contact,email,gender from user if any of them is missing exit orelse write them onto a file
+
+read -p "Enter a name: " name
+read -p "Enter your contact: " contact
+read -p "Enter your email: " email
+read -p "Enter your gender: " gender
+ if [ -z $name -o -z $contact -o -z $email -o -z gender ]
+ then
+ exit
+ else
+ touch 2.txt
+ echo $name  >> 2.txt
+ echo $contact >> 2.txt
+ echo $email >> 2.txt
+ echo $gender >> 2.txt
+ fi
+ 
